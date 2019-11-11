@@ -1,36 +1,25 @@
 ---
-title: "Herramientas de análisis de datos"
-date: "Noviembre, 2019"
+title: "Curso herramientas de análisis con R"
+subtitle: "Clase 2: Elementos básicos de R"
 author: "Alex Bajaña"
+institute: "infoRmal"
+date: "2019/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    css: "../slides.css"
+    # seal: false
     lib_dir: libs
     nature:
+      highlightStyle: github
       highlightLines: true
-      highlightStyle: solarized-light
       countIncrementalSlides: false
 ---
 
-```{r child = "../setup.Rmd"}
-```
 
 ```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(DT)
 ```
 
-class: center, middle
-
-# Bienvenidos
-
-## {Clase 2: 
-
-### Elementos básicos de R
-
-## }
-
----
 ## Atómicos
 
 La unidad elemental en R es el vector. En un vector es una colección de unicamente un solo tipo o clase:

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Herramientas de análisis de datos</title>
+    <title>Curso herramientas de análisis con R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alex Bajaña" />
-    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
-    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
-    <link rel="stylesheet" href="..\slides.css" type="text/css" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Herramientas de análisis de datos
+# Curso herramientas de análisis con R
+## Clase 2: Elementos básicos de R
 ### Alex Bajaña
-### Noviembre, 2019
+### infoRmal
+### 2019/11 (updated: 2019-11-11)
 
 ---
 
@@ -22,30 +23,6 @@ class: center, middle, inverse, title-slide
 
 
 
-layout: true
-  
-&lt;div class="my-footer"&gt;
-&lt;span&gt;
-&lt;h5&gt;Alex V. Bajaña
-&lt;/h5&gt;
-&lt;/span&gt;
-&lt;/div&gt; 
-
----
-
-
-
-class: center, middle
-
-# Bienvenidos
-
-## {Clase 2: 
-
-### Elementos básicos de R
-
-## }
-
----
 ## Atómicos
 
 La unidad elemental en R es el vector. En un vector es una colección de unicamente un solo tipo o clase:
@@ -713,12 +690,12 @@ head(first_df)
 ## # A tibble: 6 x 2
 ##         x     y
 ##     &lt;dbl&gt; &lt;int&gt;
-## 1 -2.90       5
-## 2  1.49       6
-## 3  1.25      11
-## 4  0.294      5
-## 5 -0.0474     4
-## 6  0.310     11
+## 1  0.790      8
+## 2 -1.11      12
+## 3  0.424      9
+## 4 -0.820      7
+## 5  0.724      7
+## 6  0.0579     8
 ```
 
 El operador `$` me devuelve un vector
@@ -729,8 +706,8 @@ first_df$x
 ```
 
 ```
-##  [1] -2.89875964  1.48626689  1.24616498  0.29426040 -0.04741902
-##  [6]  0.30980267  1.53551818 -0.07818796 -1.15183044  0.94392719
+##  [1]  0.79023711 -1.10720533  0.42377425 -0.82007565  0.72368626
+##  [6]  0.05788284  0.50155693  0.34026113  2.48389330  0.64011483
 ```
 
 El operador `[[` me devuelve un vector
@@ -741,8 +718,8 @@ first_df[["x"]]
 ```
 
 ```
-##  [1] -2.89875964  1.48626689  1.24616498  0.29426040 -0.04741902
-##  [6]  0.30980267  1.53551818 -0.07818796 -1.15183044  0.94392719
+##  [1]  0.79023711 -1.10720533  0.42377425 -0.82007565  0.72368626
+##  [6]  0.05788284  0.50155693  0.34026113  2.48389330  0.64011483
 ```
 
 ---
@@ -758,7 +735,7 @@ first_df[1,]
 ## # A tibble: 1 x 2
 ##       x     y
 ##   &lt;dbl&gt; &lt;int&gt;
-## 1 -2.90     5
+## 1 0.790     8
 ```
 - Columnas:
 
@@ -773,10 +750,10 @@ head(
 ## # A tibble: 4 x 1
 ##        x
 ##    &lt;dbl&gt;
-## 1 -2.90 
-## 2  1.49 
-## 3  1.25 
-## 4  0.294
+## 1  0.790
+## 2 -1.11 
+## 3  0.424
+## 4 -0.820
 ```
 
 ---
@@ -796,8 +773,8 @@ second_df[c(2,5),c("a","b")]
 ## # A tibble: 2 x 2
 ##       a     b
 ##   &lt;dbl&gt; &lt;dbl&gt;
-## 1 1.28  1.36 
-## 2 0.810 0.824
+## 1 1.09   1.31
+## 2 0.776  1.35
 ```
 
 Equivale a:
@@ -811,8 +788,8 @@ second_df[c(2,5),c(1,2)]
 ## # A tibble: 2 x 2
 ##       a     b
 ##   &lt;dbl&gt; &lt;dbl&gt;
-## 1 1.28  1.36 
-## 2 0.810 0.824
+## 1 1.09   1.31
+## 2 0.776  1.35
 ```
 
 
@@ -844,8 +821,8 @@ class: inverse, center, middle
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"highlightStyle": "github",
 "highlightLines": true,
-"highlightStyle": "solarized-light",
 "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
