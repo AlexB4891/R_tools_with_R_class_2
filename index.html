@@ -15,7 +15,7 @@ class: center, middle, inverse, title-slide
 ## Clase 2: Elementos básicos de R
 ### Alex Bajaña
 ### infoRmal
-### 2019/11 (updated: 2019-11-11)
+### 2019/11 (Actualizado: 2019-11-13)
 
 ---
 
@@ -26,8 +26,6 @@ class: center, middle, inverse, title-slide
 ## Atómicos
 
 La unidad elemental en R es el vector. En un vector es una colección de unicamente un solo tipo o clase:
-
-
 
 * **logical**
 * **double**
@@ -71,7 +69,7 @@ typeof("hello")
 ```
 
 ```r
-typeof('world') # but remember, we use double quotations!
+typeof('world') # Generalmente se usan dobles comillas
 ```
 
 ```
@@ -690,12 +688,12 @@ head(first_df)
 ## # A tibble: 6 x 2
 ##        x     y
 ##    &lt;dbl&gt; &lt;int&gt;
-## 1  0.729     9
-## 2  0.398    13
-## 3  0.479     9
-## 4 -0.834     5
-## 5 -0.510    11
-## 6 -0.894     8
+## 1 -0.932     9
+## 2  0.773     6
+## 3  0.217     7
+## 4 -0.306     5
+## 5  0.206     3
+## 6 -0.380    13
 ```
 
 El operador `$` me devuelve un vector
@@ -706,8 +704,8 @@ first_df$x
 ```
 
 ```
-##  [1]  0.7292650  0.3978403  0.4791514 -0.8343870 -0.5097509 -0.8941305
-##  [7]  1.8779494 -1.2374210 -2.3778833  1.5796793
+##  [1] -0.93221891  0.77298312  0.21695662 -0.30620312  0.20607173
+##  [6] -0.37999645 -0.19163213  0.47902853  0.40878060  0.04051331
 ```
 
 El operador `[[` me devuelve un vector
@@ -718,8 +716,8 @@ first_df[["x"]]
 ```
 
 ```
-##  [1]  0.7292650  0.3978403  0.4791514 -0.8343870 -0.5097509 -0.8941305
-##  [7]  1.8779494 -1.2374210 -2.3778833  1.5796793
+##  [1] -0.93221891  0.77298312  0.21695662 -0.30620312  0.20607173
+##  [6] -0.37999645 -0.19163213  0.47902853  0.40878060  0.04051331
 ```
 
 ---
@@ -733,9 +731,9 @@ first_df[1,]
 
 ```
 ## # A tibble: 1 x 2
-##       x     y
-##   &lt;dbl&gt; &lt;int&gt;
-## 1 0.729     9
+##        x     y
+##    &lt;dbl&gt; &lt;int&gt;
+## 1 -0.932     9
 ```
 - Columnas:
 
@@ -750,10 +748,10 @@ head(
 ## # A tibble: 4 x 1
 ##        x
 ##    &lt;dbl&gt;
-## 1  0.729
-## 2  0.398
-## 3  0.479
-## 4 -0.834
+## 1 -0.932
+## 2  0.773
+## 3  0.217
+## 4 -0.306
 ```
 
 ---
@@ -771,10 +769,10 @@ second_df[c(2,5),c("a","b")]
 
 ```
 ## # A tibble: 2 x 2
-##        a      b
-##    &lt;dbl&gt;  &lt;dbl&gt;
-## 1 -0.695 -0.131
-## 2  0.614  1.95
+##        a     b
+##    &lt;dbl&gt; &lt;dbl&gt;
+## 1  0.442 0.387
+## 2 -0.879 0.116
 ```
 
 Equivale a:
@@ -786,10 +784,10 @@ second_df[c(2,5),c(1,2)]
 
 ```
 ## # A tibble: 2 x 2
-##        a      b
-##    &lt;dbl&gt;  &lt;dbl&gt;
-## 1 -0.695 -0.131
-## 2  0.614  1.95
+##        a     b
+##    &lt;dbl&gt; &lt;dbl&gt;
+## 1  0.442 0.387
+## 2 -0.879 0.116
 ```
 
 

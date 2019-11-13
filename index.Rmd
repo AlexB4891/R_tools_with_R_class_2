@@ -3,10 +3,9 @@ title: "Curso herramientas de análisis con R"
 subtitle: "Clase 2: Elementos básicos de R"
 author: "Alex Bajaña"
 institute: "infoRmal"
-date: "2019/11 (updated: `r Sys.Date()`)"
+date: "2019/11 (Actualizado: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    # seal: false
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -23,8 +22,6 @@ library(DT)
 ## Atómicos
 
 La unidad elemental en R es el vector. En un vector es una colección de unicamente un solo tipo o clase:
-
-
 
 * **logical**
 * **double**
@@ -55,7 +52,7 @@ typeof(TRUE)
 
 ```{r}
 typeof("hello")
-typeof('world') # but remember, we use double quotations!
+typeof('world') # Generalmente se usan dobles comillas
 ```
 
 ---
